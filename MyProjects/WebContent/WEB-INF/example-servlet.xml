@@ -15,4 +15,16 @@
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+
+	<!-- <bean class="com.spring.code.configuration.HelloWorldBeanConfig">
+		<property name="helloWorldService" ref="helloWorldServ"></property>
+	</bean> -->
+	
+	<bean class="com.spring.code.configuration.HelloWorldBeanConfig">
+		<constructor-arg ref="helloWorldServ"></constructor-arg>
+	</bean>
+
+	<bean id="helloWorldServ" class="com.spring.code.service.HelloWorldService">
+
+	</bean>
 </beans>
